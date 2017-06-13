@@ -1,0 +1,263 @@
+// ============================ Curent color ============================
+
+navy = #001F3F
+blue = #0074D9
+aqua = #7FDBFF
+teal = #39CCCC
+olive = #3D9970
+green = #2ECC40
+lime = #01FF70
+yellow = #FFDC00
+orange = #FF851B
+red = #FF4136
+fuchsia = #F012BE
+purple = #B10DC9
+maroon = #85144B
+white = #FFFFFF
+silver = #DDDDDD
+gray = #AAAAAA
+black = #111111
+
+$main-text-color = black
+$link-color = black
+$link-color-visited = grey
+$link-color-hover = black
+
+//  ============================ Typography ============================ 
+
+//webfont('RUB', 'rouble-webfont', 'normal')
+//Add fotn rub write .rub a - (a,b,c,d - change type font)
+
+//webfont('PT Sans', 'PT Sans', 'normal')
+$v-font =  PT Sans
+
+$weigh-light = 300
+$weigh-normal = 400
+$weigh-bold = 700
+
+typeSize(fontSm,font)
+	+below(768px)
+		font-size font px
+	font-size fontSm px
+
+.type--xs
+	typeSize(12,10)
+
+.type--sm
+	typeSize(14,12)
+
+.type--main
+	typeSize(16,14)
+
+.type--lg
+	typeSize(24,16)
+
+.type--xl
+	typeSize(32,18)
+
+h1
+	@extend .type--xl
+h2
+	@extend .type--lg
+h3
+	@extend .type--main
+h4
+	@extend .type--sm
+h5
+	@extend .type--xs
+
+.link--main
+	color #888888
+	hover-underline()
+	&:hover
+		color black
+.link--text
+	color orange
+	text-decoration underline
+	&:hover
+		text-decoration none
+
+.link--orange
+	color orange
+	hover-underline()
+// ============================ Buttons ============================
+
+btnStyle(bg-btn,color-btn)
+	background bg-btn
+	color color-btn
+	border 1px solid color-btn
+	&:hover
+		background darken(bg-btn,20)
+		color color-btn
+
+btnStyleLight(br-btn,color-btn)
+	color color-btn
+	border br-btn solid color-btn
+	&:hover
+		color darken(color-btn,20)
+		border br-btn solid darken(color-btn,20)
+
+.btn
+	up()
+	br(4px)
+	tr(all)
+	display inline-block
+	margin-bottom 20px
+	border 1px solid black
+	padding 5px 10px
+	background none
+	&:hover
+		cursor pointer
+
+.btn--sm
+	@extend .btn
+	font-size 10px
+	padding 5px 10px
+
+.btn--md
+	@extend .btn
+	font-size 12px
+	padding 10px 20px
+
+.btn--lg
+	@extend .btn
+	font-size 20px
+	padding 10px 30px
+
+.btn--mobile
+	@extend .btn
+	+below(768px)
+		width 100%
+		text-align center
+
+.btn--orange
+	@extend .btn
+	color white
+	background orange
+	.nav-icon
+		fill white
+	&:hover
+		box-shadow 0 6px 18px rgba(255, 36, 0, 0.33)
+		background-color #ff2400
+	&:active
+		background-color #ea0000
+	input[type="submit"]
+		border 0
+
+.btn--disable
+	@extend .disabled
+	border 1px solid #909090
+	background-color #ffffff
+	color #000000
+
+.btn--light
+	@extend .btn
+	border 1px solid #909090
+	background-color #ffffff
+
+.btn--grey
+	@extend .btn
+	border 1px solid #dddddd
+	background-color #ffffff
+
+.btn--dotted
+	@extend .btn
+	border 1px dashed #d7d7d7
+	background-color #ffffff
+	text-align center
+
+.btn--white
+	@extend .btn
+	border 1px solid rgba(255, 255, 255, 0.9)
+	color rgba(255, 255, 255, 0.9)
+	.nav-icon
+		fill rgba(255, 255, 255, 0.9)
+
+.btn--icon
+	flex(mid)
+.nav-icon
+	display inline-block
+	size 20px
+	margin 0 10px
+
+button
+	font-family $v-fon
+// ============================ Inputs ============================
+
+input,textarea,select
+	border 0px
+	padding 10px 15px
+	border 1px solid grey
+	resize: none
+	outline: 0 !important
+	border-radius 4px
+	font-family $v-font
+	display block!important
+	margin-bottom 10px
+	focus(black)
+	placeholder(black)
+
+.style-label
+	display flex
+	position relative
+	align-items center
+
+
+.style-label--disable
+	@extend .disabled
+
+.check-el
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		width 30px
+		height 30px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid #cfcfcf
+		br(8px)
+		cp()
+		tr(all)
+		&:hover
+			border 1px solid #8d8d8d
+	.icon-check
+		display none
+	.sytle-input
+		&:checked + .sytle-input-element
+			flex(mid)
+			color white
+			.icon-check
+				display block
+				fill #000000
+				size 16px
+
+.style-label--radio
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		width 22px
+		height 22px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid #cfcfcf
+		round()
+		cp()
+	.icon-check
+		display none
+	.sytle-input
+		&:checked + .sytle-input-element
+			flex(mid)
+			color white
+			.icon-radio
+				round()
+				size 14px
+				background #f85e22;
+
