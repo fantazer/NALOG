@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('.select-beauty').niceSelect();
+
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
 	//	//code
