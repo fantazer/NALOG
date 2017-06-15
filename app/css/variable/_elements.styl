@@ -36,3 +36,35 @@ select.select-beauty
 .nice-select
 	float: none
 
+.coner-wrap
+	position: relative
+
+.window-coner-top
+	position: absolute
+	size: 16px
+	background: white
+	top: -8px
+	transform: rotate(45deg)
+	left: 50%
+	margin-left: -8px
+	border 1px solid $border-color
+
+.input-row
+	position: relative
+
+.input-placeholder-val
+	position: absolute
+	left 20px
+	top 23px
+	tr(all)
+	color #888888
+
+.input-animate
+	display: inline-block
+	z-index 20
+	color black
+
+.input-animate:focus+span,
+.input-animate[data-empty="false"] + span
+	top 6px
+	font-size: 10px

@@ -1,2 +1,151 @@
 /*! block header*/
+.header
+	background-color rgba(0, 0, 0, 0.25)
+
+.header-logo
+	height: 40px
+	width: 15%
+	flex(mid)
+
+.header-wrap
+	flex(between)
+
+.header-tools
+	f()
+	position: relative
+	height: 100%
+	align-items: center
+	width: 20%
+	.icon-el
+		size 16px
+		fill white
+
+.header-nav__el
+	font-size: 14px
+	position: relative
+	.icon-el
+		size 10px
+		fill white
+		margin-left: 5px
+	&:hover
+		&>.header-nav__sub
+			opacity 1
+			visibility visible
+		.header-nav__sub
+			transform translateY(0px)
+
+.header-nav__el-link
+	padding: 30px 0
+	display: inline-block
+	color white
+
+.header-cab
+	f()
+	cp()
+	align-items: center
+	width: 80%
+	padding: 28px 0
+	&:hover
+		.header-auth
+			opacity 1
+			visibility visible
+			transform translateY(0px)
+	.icon-el
+		margin-right: 15px
+
+.header-search
+	size: 16px
+	cp()
+
+.header-cab__name
+	color white
+	font-size: 14px
+	margin-top: 3px
+
+.header-tools__divider
+	width: 1px
+	height: 32px
+	background-color rgba(255, 255, 255, 0.5)
+	margin: 0 15px
+
+.header-nav
+	f()
+	width: 60%
+	justify-content:space-around
+
+.header-nav__sub
+	tr(all)
+	transform translateY(20px)
+	position: absolute
+	width: 180px
+	top: 100%
+	left: 50%
+	margin-left: -90px
+	border-radius 4px
+	border 1px solid #dddddd
+	background-color #ffffff
+	opacity 0
+	visibility hidden
+
+.header-nav__sub-wrap
+	position: relative
+	background: white
+
+.header-nav__sub-el
+	tr(all)
+	padding: 20px
+	display: block
+	border-bottom:1px solid $border-color
+	z-index 5
+	position: relative
+	&:hover
+		background: #f0f0f0
+	&:last-child
+		border-bottom: 0
+
+.header-auth__wrap
+	position: relative
+	padding: 20px
+	padding-top: 40px
+	z-index 5
+	background: white
+	.window-coner-top
+		left: 65%
+		border 1px solid $border-color
+
+.header-auth__check
+	margin-bottom: 20px
+
+.header-auth__get
+	margin-bottom: 20px
+
+.header-auth__link
+	a
+		tr(all)
+		&:hover
+			color blue
+	flex(between)
+	width: 100%
+
+.header-auth
+	tr(all)
+	position: absolute
+	top: 100%
+	right: 0
+	transform translateY(20px)
+	width: 300px
+	border-radius 4px
+	border 1px solid #dddddd
+	background-color #ffffff
+	opacity 0
+	visibility hidden
+	input
+		width: 100%
+		margin-bottom: 20px
+
+.header-slider
+	.header
+		position: absolute
+		z-index 100
+		width: 100%
 /*!block header end */

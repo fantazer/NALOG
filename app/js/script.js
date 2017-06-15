@@ -1,5 +1,34 @@
 $(document).ready(function(){
 
+	//init main-page slider
+	$(".slider-main__wrap").owlCarousel({
+		 items : 1,
+		 autoHeight : true,
+		 dots: true,
+		 autoplay : true,
+		 nav:true,
+		 navText:[
+				'<svg class="slider-control"><use xlink:href="#arrow-left"></use></svg>',
+				'<svg class="slider-control"><use xlink:href="#arrow-right"></use></svg>'
+		 ]
+		 }
+		);
+	//init animate placeholder
+	$('.input-animate').each(function(){
+		var current = $(this);
+		var dataString = "<span class='input-placeholder-val'>"+current.data('input')+"</span>";
+		current.parent().append(dataString);
+	});
+
+	$('.input-animate').on('input', function (e) {
+		$(e.currentTarget).attr('data-empty', !e.currentTarget.value);
+	});
+
+	$('.input-placeholder-val').click(function(){
+		$(this).parent().find('.input-animate').focus(); //найти Input и повесить focus
+	});
+
+	//beauty select
 	$('.select-beauty').niceSelect();
 
 	/* ###### For only ies  ######*/
