@@ -29,11 +29,82 @@ body
 	@extend .type--main
 	font-family $v-font
 	color $main-text-color
-	line-height 1
+	line-height 1.4
 	letter-spacing 0.01em
 	
 .main-cont
 	center(1170px,10px)
+
+.col
+	padding-top: 0
+	margin: 0
+.nice-select
+	br(0)
+	margin-bottom: 20px
+	display: block
+	color #000000
+	font-size 14px
+	font-weight 700
+	.list
+		width: calc(100% )
+		left 0px
+		br(0)
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+
+select.select-beauty
+	display: none!important
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+.element-select
+	padding: 20px 0
+
+.element-grid
+	text-align: center
+	padding: 20px
+	border 1px solid $border-color
+
+.element-row
+	margin-bottom: 20px
+
+.nice-select
+	float: none
+
+.coner-wrap
+	position: relative
+
+.window-coner-top
+	position: absolute
+	size: 16px
+	background: white
+	top: -8px
+	transform: rotate(45deg)
+	left: 50%
+	margin-left: -8px
+	border 1px solid $border-color
+
+.input-row
+	position: relative
+
+.input-placeholder-val
+	position: absolute
+	left 20px
+	top 23px
+	tr(all)
+	color #888888
+
+.input-animate
+	display: inline-block
+	z-index 20
+	color black
+
+.input-animate:focus+span,
+.input-animate[data-empty="false"] + span
+	top 6px
+	font-size: 10px
 
 .owl-next,.owl-prev
 	position absolute
@@ -73,7 +144,7 @@ body
 
 .slider-main__el
 	height: 600px
-	width: 100%
+	width: 100vw
 	bg-full()
 	position: relative
 	.main-cont
@@ -88,7 +159,7 @@ body
 	background: rgba(0, 0, 0, 0.45)
 
 .slider-main__title
-	font-size: 36px
+	@extend .type--xl
 	font-weight:300
 	color white
 	margin-bottom: 30px
@@ -108,5 +179,274 @@ body
 
 .slider-main__content
 	margin-top: 75px
+
+.slider-main__wrap
+	width: 100%
+
+.section--grey
+	background: #f7f7f7
+
+.sale-wrap
+	f()
+	justify-content: space-between
+
+.sale__el
+	bsh()
+	width: 32%
+	padding: 40px
+
+.sale__get
+	width: 100%
+	text-align: center
+	font-size: 14px
+	margin-bottom: 0
+
+.sale__title
+	font-size 26px
+	font-weight 300
+	text-align: center
+	margin-bottom: 30px
+
+.sale__text
+	text-align: center
+	margin-bottom: 30px
+	line-height: 26px
+
+.sale__price
+	text-align: center
+	margin-bottom: 30px
+	font-size: 26px
+	font-weight: 300
+
+.work-wrap
+	f()
+	justify-content: space-between
+
+.work__el
+	flex(mid)
+	fl()
+	width: 25%
+	position: relative
+
+.work__icon
+	margin-bottom: 30px
+	.icon-el
+		size: 90px
+
+.work__text
+	text-align: center
+	line-height: 30px
+
+.work__arrow
+	position: absolute
+	left: 100%
+	top: 0px
+
+.kind-wrap
+	flex(between)
+	fw()
+
+.kind__el
+	f()
+	justify-content: space-between
+	width: 48%
+	margin-bottom: 40px
+
+.kind__icon
+	flex(mid)
+	br(4px)
+	size: 80px
+	border 2px solid #d8d8d8
+	background-color rgba(34, 143, 199, 0)
+	margin-right: 20px
+	.icon-el
+		size: 50px
+
+.kind__cont
+	width: 80%
+
+.kind__title
+	font-size: 18px
+	margin-bottom: 15px
+
+.kind__text
+	color #888888
+	line-height: 26px
+
+.why-wrap
+	f()
+	justify-content: space-between
+
+.why__el
+	flex(mid)
+	fl()
+	width: 25%
+	position: relative
+
+.why__icon
+	margin-bottom: 20px
+	.icon-el
+		size: 90px
+
+.why__title
+	font-size: 18px
+	margin-bottom: 20px
+
+.why__text
+	text-align: center
+	line-height: 26px
+	color #888888
+
+.section
+	padding: 70px 0
+
+.section-kind
+	padding-bottom: 30px
+
+.section-help
+	background: blue
+	color white
+
+.section-title
+	font-size 36px
+	font-weight 300
+	text-align: center
+	margin-bottom: 60px
+
+.section-title-divider
+	font-size 36px
+	font-weight 300
+	text-align: center
+	padding-top: 80px
+	margin-top: 70px
+	position: relative
+	&:before
+		content: ''
+		height: 1px
+		width: 170px
+		background-color #e4e4e4
+		position: absolute
+		top 0
+		left: 50%
+		margin-left: -85px
+
+.video
+	margin-top: 70px
+	flex(mid)
+
+.help-wrap
+	flex(mid)
+	fl()
+
+.help__text
+	width: 80%
+	font-size 30px
+	font-weight 300
+	text-align: center
+	line-height: 1.7
+	margin-bottom: 40px
+
+.help-get
+	margin-bottom: 0
+
+.video-img
+	height: 450px
+	width: 750px
+	bg-full()
+	flex(mid)
+	&:hover
+		.icon-el
+			fill red
+	.icon-el
+		tr(all)
+		size: 80px
+		fill blue
+
+.review-slider
+	.slider-control
+		fill #dddddd
+	.owl-dots
+		margin-top: 60px
+	.owl-dot
+		background: rgba(221, 221, 221, 0.52)
+	.owl-dot.active
+		background: #dddddd
+	.owl-prev
+		left: 10%
+		margin-top: -5%
+	.owl-next
+		right: 10%
+		margin-top: -5%
+
+.review-el__text
+	line-height: 1.6
+	text-align: center
+	width: 75%
+	margin-bottom: 30px
+
+.review-el__name
+	color: #888888
+
+.review-el__wrap
+	flex(mid)
+	fl()
+
+.rewards
+	f()
+	justify-content: space-between
+
+.rewards__el
+	width: 31%
+
+.rewards__img
+	margin-bottom: 20px
+
+.rewards__title
+	margin-bottom: 20px
+	@extend .type--md
+	line-height: 1.6
+
+.rewards__text
+	line-height: 1.6
+	color #888888
+
+.write
+	flex(between)
+	fw()
+	margin-top: 70px
+
+.write__el
+	flex(mid)
+	tr(all)
+	height: 140px
+	width: 24%
+	&:hover
+		box-shadow 0 5px 15px rgba(196, 208, 227, 0.33)
+		border-radius 4px
+
+.decloration-content
+	margin-top: 70px
+
+.news
+	f()
+	justify-content: space-between
+
+.news__el
+	width: 31%
+
+.news__date
+	color #888888
+	margin-bottom: 20px
+
+.news__title
+	@extend .type--md
+	margin-bottom: 20px
+
+.news__text
+	margin-bottom: 20px
+	color #888888
+
+//.news__link
+
 
 @import "../module/**/*"

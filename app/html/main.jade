@@ -2,8 +2,7 @@ include block_html/_style.jade
 include ../module/**/*.jade
 
 .slider-main
-	.header-slider
-		+header()
+	+header('header-slider')
 	.slider-main__wrap.owl-carousel
 		- for (var i=0;i<3;i++)
 			.slider-main__el(style="background-image:url('img/slider-main-el-#{i+1}.jpg')")
@@ -16,6 +15,183 @@ include ../module/**/*.jade
 							.slider-main__get
 							a(href="#").btn--md.btn--blue Попробовать
 
+//section-sale
+.section.section--grey.section-sale
+	.main-cont
+		.sale-wrap
+			.sale__el
+				.sale__title Получить 3-НДФЛ
+				.sale__text Получите готовую декларацию для физических лиц 3-НДФЛ онлайн при помощи простых пошаговых инструкций нашего веб-сайта и скачайте её в удобном формате.
+				.sale__price 499 ₽
+				a(href="#").sale__get.btn--md.btn--blue Попробовать бесплатно
+
+			.sale__el
+				.sale__title Возврат сейчас
+				.sale__text Мы предлагаем мгновенный возврат. Не нужно ждать. Мы выплатим вам деньги сразу. А у инспекции по закону есть 4 месяца на проверку ваших документов.
+				.sale__price 2 999 ₽
+				a(href="#").sale__get.btn--md.btn--blue Попробовать бесплатно
+
+			.sale__el
+				.sale__title Вернуть налоги
+				.sale__text Мы поможем быстро сделать вам все документы для возврата налога и подать их онлайн в инспекцию. Мы сделаем все быстро, надежно и удобно для вас.
+				.sale__price 4 999 ₽
+				a(href="#").sale__get.btn--md.btn--blue Выбрать
+//section-sale-end
+
+//section-sale
+.section.section-work
+	.section-title Как это работает
+	.main-cont
+		.work-wrap
+			.work__el
+				.work__icon
+					+icon("icons-info","icon-el")
+					.work__arrow
+						+icon("think-arrow-right","icon-el")
+				.work__text Вы вносите свои данные, а консультанту можно задать любой вопрос.
+
+			.work__el
+				.work__icon
+					+icon("icons-doc","icon-el")
+					.work__arrow
+						+icon("think-arrow-right","icon-el")
+				.work__text  Веб-сайт сформирует Вам правильную декларацию по Вашим данным.
+
+			.work__el
+				.work__icon
+					+icon("icons-check","icon-el")
+				.work__text  Вы можете распечатать готовую декларацию или подать онлайн.
+//section-sale-end
+
+//section-sale
+.section.section--grey.section-kind
+	.main-cont
+		.kind-wrap
+			- each kind in kinds
+				.kind__el
+					.kind__icon
+						svg(class='icon-el')
+							use(xlink:href="##{kind.icon}")
+					.kind__cont
+						.kind__title #{kind.title}
+						.kind__text #{kind.text}
+//section-sale-end
+
+//section-why
+.section.section-why
+	.section-title Почему нужно выбрать нас
+	.main-cont
+		.why-wrap
+			.why__el
+				.why__icon
+					+icon("icons-support","icon-el")
+				.why__title Удобство и поддержка
+				.why__text С нами все будет просто и удобно. И вы сможете задавать специалисту любые вопросы.
+
+			.why__el
+				.why__icon
+					+icon("icons-like","icon-el")
+				.why__title Надежность и качество
+				.why__text  С нами все будет просто и удобно.И вы сможете задавать специалисту любые вопросы.
+
+			.why__el
+				.why__icon
+					+icon("icons-low-price","icon-el")
+				.why__title Низкие цены
+				.why__text  С нами все будет просто и удобно.И вы сможете задавать специалисту любые вопросы.
+
+		.section-title-divider С нами декларация — это просто!
+
+		.video
+			a(href="https://youtu.be/KOfyeYiO8Rk").fancybox
+				.video-img(style="background-image:url('img/video-cover.jpg')")
+					+icon("icons-play-button","icon-el")
+//section-why-end
+
+//section-help
+.section.section--blue.section-help
+	.main-cont
+		.help-wrap
+			.help__text Мы помогли подготовить и подать декларации и другие документы уже более чем 300 000 пользователей
+			.help-get.btn--md.btn--white Попробовать бесплатно
+//section-help-end
+
+//section-review
+.section.section--grey.section-review
+	.section-title Отзывы наших клиентов
+	.review-wrap
+		.review-slider.owl-carousel
+			- for (var i=0;i<4;i++)
+				.review-el
+					.main-cont
+						.review-el__wrap
+							.review-el__text Приобрел микроволновую печь LG MS2595GIS в середине ноября. За почти три недели использования могу написать честный отзыв, который поможет новым покупателям разобраться в некоторых нюансах.
+							.review-el__name Анастасия, Москва
+
+//section-review-end
+
+//section-rewards
+.section.section-rewards
+	.section-title Наши призы и награды
+	.main-cont
+		.rewards
+			.rewards__el
+				.rewards__img
+					img(src="img/reward-1.jpg", alt="")
+				.rewards__title Общенациональная награда Премия Рунета
+				.rewards__text Общенациональная награда в области высоких технологий и интернета за вклад в развитие российского сегмента сети Интернет.
+			.rewards__el
+				.rewards__img
+					img(src="img/reward-2.jpg", alt="")
+				.rewards__title Первое место на конкурсе Российской Недели Интернета
+				.rewards__text Первое место на конкурсе проектов в рамках Недели Российского Интернета - одном из самых престижных конкурсов интернет-проектов в России.
+			.rewards__el
+				.rewards__img
+					img(src="img/reward-3.jpg", alt="")
+				.rewards__title Приз зрительских симпатий на конкурсе финтех-компаний FinNext
+				.rewards__text Приз зрительских симпатий на всероссийском конкурсе инновационных компаний финансового сектора FinNext-2015.
+
+		.section-title-divider Пишут о Налогии
+
+		.write
+			- for (var i=0;i<8;i++)
+				a(href="#").write__el
+					img(src="img/write-#{i+1}.png", alt="")
+
+		.section-title-divider Налоговая декларация 3-НДФЛ
+
+		.decloration-content
+			p Налоговая декларация 3-НДФЛ – это документ, с помощью которого в России физические лица отчитываются по налогу на доходы физических лиц (НДФЛ). Декларация заполняется при помощи специальной формы. Форму (бланк) 3-НДФЛ, в том числе за 2017, 2016 и 2015 годы, можно скачать в разделе "Полезное". Там же можно посмотреть примеры и образцы заполнения 3-НДФЛ. Подготовить ее Вам поможет этот веб-сайт (в том числе декларацию за 2016 год, которая подается начиная с 2017 года).
+
+			p Обычно декларацию 3-НДФЛ (которую некорректно называют также 3НДФЛ, НДФЛ-3 или "Ндфлка") должны подавать лица, продавшие имущество, имеющие доходы из-за рубежа и получившие прочие доходы, по которым налог не был уплачен. Также декларацию 3-НДФЛ должны подавать нотариусы, занимающиеся частной практикой, некоторые индивидуальные предприниматели и некоторые другие категории лиц.
+
+			p 3-НДФЛ также подается для получения некоторых налоговых вычетов, например, при возврате подоходного налога при покупке квартиры.
+
+			p Вы можете заполнить онлайн налоговую декларацию 3-НДФЛ за 2016, 2015 и 2014 годы на этом веб-сайте. Налогия поможет Вам, где бы Вы ни находились: Москва и Санкт-Петербург, Новосибирск и Екатеринбург, Нижний Новгород и так далее.
+//section-review-end
+
+//section-news
+.section.section--grey.section-news
+	.section-title Новости и советы
+	.main-cont
+		.news
+			- for (var i=0;i<3;i++)
+				.news__el
+					.news__date 23 Марта 2017
+					.news__title Росгосстрах-Жизнь и Налогия: совместный проект
+					.news__text Страховая компания «Росгосстрах-Жизнь» и Налогия запустили электронное оформление налогового вычета для клиентов «Росгосстрах-Жизнь».
+					a(href="#").news__link.link--blue Подробнее
+//section-news-end
+
+//section-help
+.section.section--blue.section-help
+	.main-cont
+		.help-wrap
+			.help__text Мы помогли подготовить и подать декларации и другие документы уже более чем 300 000 пользователей
+			.help-get.btn--md.btn--white Попробовать бесплатно
+//section-help-end
+
++footer()
 
 
 

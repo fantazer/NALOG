@@ -1,7 +1,27 @@
 $(document).ready(function(){
 
+	//init fancy box
+	$(".fancybox").fancybox();
+	$(".video-fancy").click(function() {
+    $.fancybox({
+            'padding'       : 0,
+            'autoScale'     : false,
+            'transitionIn'  : 'none',
+            'transitionOut' : 'none',
+            'title'         : this.title,
+            'width'     : 680,
+            'height'        : 495,
+            'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+            'type'          : 'swf',
+            'swf'           : {
+                 'wmode'        : 'transparent',
+                'allowfullscreen'   : 'true'
+            }
+        });
+    return false;
+});
 	//init main-page slider
-	$(".slider-main__wrap").owlCarousel({
+	$(".slider-main__wrap, .review-slider").owlCarousel({
 		 items : 1,
 		 autoHeight : true,
 		 dots: true,
@@ -13,6 +33,7 @@ $(document).ready(function(){
 		 ]
 		 }
 		);
+
 	//init animate placeholder
 	$('.input-animate').each(function(){
 		var current = $(this);
