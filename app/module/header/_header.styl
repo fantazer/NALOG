@@ -21,6 +21,8 @@
 		fill white
 
 .header-nav__el
+	+below(1200px)
+		font-size: 12px
 	font-size: 14px
 	position: relative
 	.icon-el
@@ -44,7 +46,7 @@
 	cp()
 	align-items: center
 	width: 80%
-	padding: 28px 0
+	height: 80px
 	&:hover
 		.header-auth
 			opacity 1
@@ -54,8 +56,49 @@
 		margin-right: 15px
 
 .header-search
-	size: 16px
 	cp()
+	size: 16px
+	height: 80px
+	flex(mid)
+	position: relative
+	&:hover
+		.header-search-form
+			opacity 1
+			visibility visible
+			transform translateY(00px)
+
+.header-search-form
+	tr(all)
+	position: absolute
+	top: 100%
+	transform translateY(20px)
+	border-radius 4px
+	border 1px solid #dddddd
+	opacity 0
+	visibility hidden
+
+
+.header-search-form-wrap
+	padding: 20px
+	position: relative
+	z-index 5px
+	background: white
+
+.input-search
+	padding: 10px
+	border-radius 4px 0px 0px 4px
+
+.btn-search
+	@extend .btn--blue
+	@extend .btn--md
+	padding: 10px 20px
+	font-size: 12px
+	border-radius 0px 4px 4px 0px
+.search-row
+	f()
+	input
+		margin-bottom: 0
+
 
 .header-cab__name
 	color white

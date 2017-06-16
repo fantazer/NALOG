@@ -26,6 +26,14 @@ mixin header(classname)
 				.header-tools
 					.header-search
 						+icon("magnifying-glass","icon-el")
+						.header-search-form
+								.coner-wrap
+									.window-coner-top
+								.header-search-form-wrap
+									form(action="#")
+										.search-row
+											input(type="text"  placeholder="Поиск").input-search
+											input(type="submit" value="найти").btn-search.btn--blue.btn--md
 					.header-tools__divider
 					.header-cab
 						+icon("padlock","icon-el")

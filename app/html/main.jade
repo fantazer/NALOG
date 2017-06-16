@@ -20,22 +20,28 @@ include ../module/**/*.jade
 	.main-cont
 		.sale-wrap
 			.sale__el
-				.sale__title Получить 3-НДФЛ
-				.sale__text Получите готовую декларацию для физических лиц 3-НДФЛ онлайн при помощи простых пошаговых инструкций нашего веб-сайта и скачайте её в удобном формате.
-				.sale__price 499 ₽
-				a(href="#").sale__get.btn--md.btn--blue Попробовать бесплатно
+				.sale__el-content
+					.sale__title Получить 3-НДФЛ
+					.sale__text Получите готовую декларацию для физических лиц 3-НДФЛ онлайн при помощи простых пошаговых инструкций нашего веб-сайта и скачайте её в удобном формате.
+				.sale__el-bot
+					.sale__price 499 ₽
+					a(href="#").sale__get.btn--md.btn--blue Попробовать бесплатно
 
 			.sale__el
-				.sale__title Возврат сейчас
-				.sale__text Мы предлагаем мгновенный возврат. Не нужно ждать. Мы выплатим вам деньги сразу. А у инспекции по закону есть 4 месяца на проверку ваших документов.
-				.sale__price 2 999 ₽
-				a(href="#").sale__get.btn--md.btn--blue Попробовать бесплатно
+				.sale__el-content
+					.sale__title Возврат сейчас
+					.sale__text Мы предлагаем мгновенный возврат. Не нужно ждать. Мы выплатим вам деньги сразу. А у инспекции по закону есть 4 месяца на проверку ваших документов.
+				.sale__el-bot
+					.sale__price 2 999 ₽
+					a(href="#").sale__get.btn--md.btn--blue Попробовать бесплатно
 
 			.sale__el
-				.sale__title Вернуть налоги
-				.sale__text Мы поможем быстро сделать вам все документы для возврата налога и подать их онлайн в инспекцию. Мы сделаем все быстро, надежно и удобно для вас.
-				.sale__price 4 999 ₽
-				a(href="#").sale__get.btn--md.btn--blue Выбрать
+				.sale__el-content
+					.sale__title Вернуть налоги
+					.sale__text Мы поможем быстро сделать вам все документы для возврата налога и подать их онлайн в инспекцию. Мы сделаем все быстро, надежно и удобно для вас.
+				.sale__el-bot
+					.sale__price 4 999 ₽
+					a(href="#").sale__get.btn--md.btn--blue Выбрать
 //section-sale-end
 
 //section-sale
@@ -103,7 +109,7 @@ include ../module/**/*.jade
 		.section-title-divider С нами декларация — это просто!
 
 		.video
-			a(href="https://youtu.be/KOfyeYiO8Rk").fancybox
+			a(href="https://youtu.be/KOfyeYiO8Rk").fancybox.video-link
 				.video-img(style="background-image:url('img/video-cover.jpg')")
 					+icon("icons-play-button","icon-el")
 //section-why-end

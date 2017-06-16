@@ -70,6 +70,13 @@ $(document).ready(function(){
 
 	//for init SVG 
 	svg4everybody();
+	localStorage.clear();
+	sessionStorage.clear();
+
+	//clear local storage
+	$(window).unload(function(){
+	  localStorage.clear();
+	});
 	
 	/* ###### For SlideToggle Elements  ######*/
 	/*var hideToggle = function(targetClick,toggleEl) {
