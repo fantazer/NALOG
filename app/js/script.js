@@ -1,25 +1,29 @@
 $(document).ready(function(){
 
+	//top nav mobile
+	var hideToggle = function(targetClick,toggleEl) {
+		$(targetClick).click(function(event){
+				event.stopPropagation();
+				$(toggleEl).slideToggle("fast");
+		});
+		$(toggleEl).on("click", function (event) {
+			event.stopPropagation();
+		});
+		$(document).on("click", function () {
+				$(toggleEl).hide();
+		});
+	}
+	hideToggle('.menu-toggle','.header-nav');
+
+	if ($(document).width() < 1025) {
+		$('.header-nav__sub').hide();
+		$('.header-nav__el').click(function () {
+			$(this).find('.header-nav__sub').slideToggle(200,"linear");
+		})
+	}
 	//init fancy box
 	$(".fancybox").fancybox();
-	$(".video-fancy").click(function() {
-    $.fancybox({
-            'padding'       : 0,
-            'autoScale'     : false,
-            'transitionIn'  : 'none',
-            'transitionOut' : 'none',
-            'title'         : this.title,
-            'width'     : 680,
-            'height'        : 495,
-            'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-            'type'          : 'swf',
-            'swf'           : {
-                 'wmode'        : 'transparent',
-                'allowfullscreen'   : 'true'
-            }
-        });
-    return false;
-});
+
 	//init main-page slider
 	$(".slider-main__wrap, .review-slider").owlCarousel({
 		 items : 1,

@@ -3,6 +3,8 @@
 	background-color rgba(0, 0, 0, 0.25)
 
 .header-logo
+	+below(1024px)
+		width: 100px
 	height: 40px
 	width: 15%
 	flex(mid)
@@ -11,6 +13,12 @@
 	flex(between)
 
 .header-tools
+	+below(1024px)
+		width: 240px
+	+below(768px)
+		position: initial
+	+below(640px)
+		width: 100px
 	f()
 	position: relative
 	height: 100%
@@ -20,9 +28,21 @@
 		size 16px
 		fill white
 
+.menu-toggle
+	+above(1024px)
+		display: none
+	.icon-el
+		cp()
+		size 20px
+		margin-top: 6px
 .header-nav__el
 	+below(1200px)
 		font-size: 12px
+	+below(1024px)
+		width: 100%
+		text-align: center
+		background: blue
+		font-size: 14px
 	font-size: 14px
 	position: relative
 	.icon-el
@@ -37,11 +57,20 @@
 			transform translateY(0px)
 
 .header-nav__el-link
+	+below(1024px)
+		width: 100%
+		padding: 10px 30px
+		flex(between)
+		border-bottom:1px solid rgba(236, 236, 236, 0.09)
 	padding: 30px 0
 	display: inline-block
 	color white
 
 .header-cab
+	+below(640px)
+		width: 100%
+		flex(mid)
+
 	f()
 	cp()
 	align-items: center
@@ -53,9 +82,15 @@
 			visibility visible
 			transform translateY(0px)
 	.icon-el
+		+below(640px)
+			margin-right: 0
 		margin-right: 15px
 
 .header-search
+	+below(768px)
+		position: initial
+		.coner-wrap
+			display: none
 	cp()
 	size: 16px
 	height: 80px
@@ -68,6 +103,11 @@
 			transform translateY(00px)
 
 .header-search-form
+	+below(768px)
+		left: 0
+		width: 100%
+		br(0)
+		border 0
 	tr(all)
 	position: absolute
 	top: 100%
@@ -79,12 +119,14 @@
 
 
 .header-search-form-wrap
+
 	padding: 20px
 	position: relative
-	z-index 5px
 	background: white
 
 .input-search
+	+below(768px)
+		width: 100%
 	padding: 10px
 	border-radius 4px 0px 0px 4px
 
@@ -101,22 +143,44 @@
 
 
 .header-cab__name
+	+below(640px)
+		display: none
 	color white
 	font-size: 14px
 	margin-top: 3px
 
 .header-tools__divider
+	+below(640px)
+		display: none
 	width: 1px
 	height: 32px
 	background-color rgba(255, 255, 255, 0.5)
 	margin: 0 15px
 
 .header-nav
+	+below(1024px)
+		position: absolute
+		top: 100%
+		width: 100%
+		left: 0
+		fw()
+		display: none
 	f()
 	width: 60%
 	justify-content:space-around
 
 .header-nav__sub
+	+below(1024px)
+		transform translateY(0px)
+		position: initial
+		width: 100%
+		top: initital
+		left: initial
+		margin-left: 0px
+		border-radius 0px
+		opacity 1!important
+		visibility visible!important
+		transition initial
 	tr(all)
 	transform translateY(20px)
 	position: absolute
@@ -134,7 +198,14 @@
 	position: relative
 	background: white
 
+.header-nav__sub--hidden
+	opacity 0
+	visibility hidden
+	height: 0
+
 .header-nav__sub-el
+	+below(1024px)
+		padding: 10px 0
 	tr(all)
 	padding: 20px
 	display: block
@@ -171,6 +242,14 @@
 	width: 100%
 
 .header-auth
+	+below(768px)
+		br(0)
+		width: 100%
+		right: initial
+		left: 0
+		border 0px
+		.coner-wrap
+			display: none
 	tr(all)
 	position: absolute
 	top: 100%
@@ -190,4 +269,12 @@
 	position: absolute
 	z-index 100
 	width: 100%
+
+.slider-main
+	+below(768px)
+		.owl-nav
+			display: none!important
+.header-layer
+	position: relative
+
 /*!block header end */

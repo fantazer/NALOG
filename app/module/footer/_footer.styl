@@ -1,17 +1,31 @@
 //.footer
 
 .footer-head
+	+below(1024px)
+		fw()
 	flex(between)
 	padding: 40px 0
 	border-bottom:1px solid $border-color
 	margin-bottom: 40px
 
 .footer-head-cont
+	+below(1024px)
+		width: 100%
+		flex(mid)
+		margin-bottom: 30px
+	+below(768px)
+		fw()
+		fl()
 	width: 65%
 	f()
 	align-items: center
 
 .footer-head-cont__el
+	+below(768px)
+		margin-right: 0
+		width: 100%
+		text-align: center
+		margin-bottom: 10px
 	margin-right: 5%
 	&:last-child
 		margin-right: 0
@@ -21,10 +35,14 @@
 	color #888888
 
 .footer-head-cont__el-phone
+	+below(768px)
+		font-size: 16px
 	font-size: 20px
 	font-weight: 300
 
 .footer-head-soc
+	+below(1024px)
+		width: 100%
 	f()
 	justify-content: center
 	align-items: flex-end
@@ -39,6 +57,8 @@
 //.footer-head-soc__el
 
 .footer-menu
+	+below(768px)
+		display: none
 	f()
 	justify-content: space-between
 	padding-bottom 40px
@@ -53,17 +73,29 @@
 	margin-bottom: 20px
 
 .footer-menu__title-el
+	+below(1024px)
+		font-size: 12px
 	tr(all)
 	display: block
 	margin-bottom: 10px
 	color #888888
 	&:hover
 		color blue
+
 .footer-bottom
+	+below(1024px)
+		flex(mid)
+		fw()
 	flex(between)
 	padding-bottom: 40px
 
 .footer-bottom__el
+	+below(1024px)
+		flex-grow 1
+		flex-basis 50%
+		text-align: center
+		padding: 10px
+		font-size: 10px
 	tr(all)
 	font-size: 14px
 	color #888888
