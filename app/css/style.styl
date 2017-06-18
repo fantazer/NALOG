@@ -146,6 +146,8 @@ select.select-beauty
 	+below(768px)
 		height: 450px
 		width: 100%
+		//background-size: contain
+		background-position 63% 0
 	height: 600px
 	width: 100vw
 	bg-full()
@@ -291,6 +293,7 @@ select.select-beauty
 .work__text
 	+below(1024px)
 		font-size: 14px
+		width: 80%
 	text-align: center
 	line-height: 30px
 
@@ -338,11 +341,14 @@ select.select-beauty
 	+below(768px)
 		width: 100%
 		text-align: center
+		flex(mid)
+		fl()
 	width: 80%
 
 .kind__title
 	+below(768px)
 		text-align: center
+		width: 80%
 	+below(1200px)
 		font-size: 16px
 	font-size: 18px
@@ -398,8 +404,9 @@ select.select-beauty
 .section-title
 	+below(768px)
 		margin-bottom: 30px
-		font-size: 28px
+		font-size: 24px
 		padding: 0 15px
+		font-weight: bold
 	font-size 36px
 	font-weight 300
 	text-align: center
@@ -528,6 +535,7 @@ select.select-beauty
 .rewards__title
 	+below(768px)
 		text-align: center
+		width: 80%
 	margin-bottom: 20px
 	@extend .type--md
 	line-height: 1.6
@@ -562,6 +570,8 @@ select.select-beauty
 .decloration-content
 	+below(768px)
 		margin-top: 30px
+		p
+			color #888
 	margin-top: 70px
 
 .news
@@ -596,6 +606,8 @@ select.select-beauty
 	margin-bottom: 20px
 	color #888888
 
+.nobr
+	white-space: nowrap
 //.news__link
 
 

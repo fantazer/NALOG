@@ -119,7 +119,10 @@
 
 
 .header-search-form-wrap
-
+	+below(768px)
+		padding: 20px
+		input
+			br(0)
 	padding: 20px
 	position: relative
 	background: white
@@ -165,7 +168,8 @@
 		left: 0
 		fw()
 		display: none
-	f()
+	+above(1024px)
+		display: flex !important
 	width: 60%
 	justify-content:space-around
 
@@ -181,6 +185,8 @@
 		opacity 1!important
 		visibility visible!important
 		transition initial
+		.window-coner-top
+			display: none
 	tr(all)
 	transform translateY(20px)
 	position: absolute
@@ -209,7 +215,7 @@
 	tr(all)
 	padding: 20px
 	display: block
-	border-bottom:1px solid $border-color
+	border-bottom:1px solid #f7f6f6
 	z-index 5
 	position: relative
 	&:hover
