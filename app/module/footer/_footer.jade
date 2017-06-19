@@ -2,9 +2,9 @@ mixin footer()
 	//block footer
 	.footer
 		.main-cont
+			//footer-head
 			.footer-head
 				.footer-head-cont
-
 					.footer-head-cont__el
 						.footer-head-cont__el-town Россия
 						a(href="tel:8 800 500 3478").footer-head-cont__el-phone 8 800 500 3478 (бесплатно)
@@ -30,7 +30,9 @@ mixin footer()
 						+icon("soc-in","icon-el")
 					//a(href="#").footer-head-soc__el
 						+icon("soc-vk","icon-el")
+			//footer-head-end
 
+			//footer-menu
 			.footer-menu
 				.footer-col
 					.footer-menu__title Декларация 3-НДФЛ
@@ -67,7 +69,9 @@ mixin footer()
 					a(href="#").footer-menu__title-el Предпринимателю
 					a(href="#").footer-menu__title-el Программы для 3-НДФЛ
 					a(href="#").footer-menu__title-el Налогопедия
+			//footer-menu-end
 
+			//footer-bottom
 			.footer-bottom
 				a(href="#").footer-bottom__el Правовая информация
 				a(href="#").footer-bottom__el Компаниям
@@ -80,5 +84,6 @@ mixin footer()
 				a(href="#").footer-bottom__el Партнерам
 				a(href="#").footer-bottom__el Форум
 				a(href="#").footer-bottom__el ООО «Налогия»
-				
+			//footer-bottom-end
+
 	//block footer end

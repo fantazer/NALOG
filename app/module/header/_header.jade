@@ -10,8 +10,9 @@ mixin header(classname)
 						- var items = ['О нас','Декларация 3-НДФЛ','Налоги','Покупка жилья','Другие вычеты','Полезное'];
 						- each item in items
 							.header-nav__el
-								a(href="#").header-nav__el-link #{item}
-									span
+								.header-nav__el-link-wrap
+									a(href="#").header-nav__el-link #{item}
+									.header-nav__el-icon
 										+icon("arrow-down","icon-el")
 								.header-nav__sub
 									.coner-wrap

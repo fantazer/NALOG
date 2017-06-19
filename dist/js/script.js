@@ -17,9 +17,14 @@ $(document).ready(function(){
 
 	if ($(document).width() < 1025) {
 		$('.header-nav__sub').hide();
-		$('.header-nav__el').click(function () {
+		$('.header-nav__el-icon').click(function () {
+			var current = $(this).closest('.header-nav__el').find('.header-nav__sub');
 			$('.header-nav__sub').slideUp();
-			$(this).find('.header-nav__sub').slideToggle(400,"linear");
+				if(current.is(':visible')){
+					current.slideUp();
+				} else {
+					current.slideToggle(400,"linear");
+				}
 		})
 	}
 	//init fancy box
@@ -32,6 +37,7 @@ $(document).ready(function(){
 		 dots: true,
 		 autoplay : true,
 		 nav:true,
+		 loop:true,
 		 navText:[
 				'<svg class="slider-control"><use xlink:href="#arrow-left"></use></svg>',
 				'<svg class="slider-control"><use xlink:href="#arrow-right"></use></svg>'
@@ -75,13 +81,13 @@ $(document).ready(function(){
 
 	//for init SVG 
 	svg4everybody();
-	localStorage.clear();
-	sessionStorage.clear();
-
-	//clear local storage
-	$(window).unload(function(){
-	  localStorage.clear();
-	});
+	// localStorage.clear();
+	// sessionStorage.clear();
+	//
+	// //clear local storage
+	// $(window).unload(function(){
+	//   localStorage.clear();
+	// });
 	
 	/* ###### For SlideToggle Elements  ######*/
 	/*var hideToggle = function(targetClick,toggleEl) {

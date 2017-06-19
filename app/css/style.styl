@@ -1,11 +1,11 @@
 @import 'rupture'
 @import "variable/_function.styl"
-@import "variable/_ie.styl"
 @import "icon/sprite.css"
 @import "variable/_helper.styl"
 @import "variable/_default.styl"
 @import "variable/_constant.styl"
 @import "variable/_grid.styl"
+@import "variable/_ie.styl"
 @import "variable/_elements.styl"
 
 rupture.scale = 0 480px 768px 992px 1200px
@@ -166,9 +166,8 @@ select.select-beauty
 .slider-main__title
 	+below(1200px)
 		font-size: 28px
-	+below(1024px)
-		font-size: 20px
 	+below(768px)
+		font-size: 20px
 		width: 70%
 	@extend .type--xl
 	font-weight:300
@@ -259,6 +258,10 @@ select.select-beauty
 	text-align: center
 	margin-bottom: 30px
 	line-height: 1.6
+	width: 100%
+
+.sale__el-content
+	width: 100%
 
 .sale__price
 	text-align: center
@@ -296,6 +299,7 @@ select.select-beauty
 		width: 80%
 	text-align: center
 	line-height: 30px
+	width: 100%
 
 .work__arrow
 	+below(1024px)
@@ -388,6 +392,7 @@ select.select-beauty
 	text-align: center
 	line-height: 26px
 	color #888888
+	width: 100%
 
 .section
 	+below(768px)
