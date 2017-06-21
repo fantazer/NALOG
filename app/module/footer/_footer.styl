@@ -87,8 +87,12 @@
 	+below(1024px)
 		flex(mid)
 		fw()
+		padding-bottom: 20px
 	flex(between)
 	padding-bottom: 40px
+
+.footer-head-soc__el
+	margin-left: 5px
 
 .footer-bottom__el
 	+below(1024px)
@@ -97,8 +101,18 @@
 		text-align: center
 		padding: 10px
 		font-size: 10px
+	+below(768px)
+		text-align: center
 	tr(all)
 	font-size: 14px
 	color #888888
 	&:hover
 		color blue
+
+.footer-bottom__copyright
+	+below(768px)
+		text-align: center
+	//text-align: center
+	font-size: 14px
+	color #888888
+	padding-bottom: 40px

@@ -143,8 +143,9 @@ select.select-beauty
 	opacity 1
 
 .slider-main__el
+	+below(1200px)
+		height: 500px
 	+below(768px)
-		height: 450px
 		width: 100%
 		//background-size: contain
 		background-position 63% 0
@@ -154,6 +155,8 @@ select.select-beauty
 	position: relative
 	.main-cont
 		height: 100%
+
+
 
 .slider-main__filter
 	position: absolute
@@ -167,8 +170,7 @@ select.select-beauty
 	+below(1200px)
 		font-size: 28px
 	+below(768px)
-		font-size: 20px
-		width: 70%
+		font-size: 24px
 	@extend .type--xl
 	font-weight:300
 	color white
@@ -179,8 +181,9 @@ select.select-beauty
 	+below(1200px)
 		font-size: 16px
 	+below(1024px)
-		font-size: 12px
 		width: 70%
+	+below(768px)
+		width: 100%
 	font-size: 24px
 	font-weight:300
 	color white
@@ -202,10 +205,12 @@ select.select-beauty
 		margin-left: 20%
 	+below(768px)
 		margin-left: 10px
+		margin-top: 140px
 		.btn--md
+			display: none
 			width: 100%
 			text-align: center
-	margin-top: 75px
+	margin-top: 115px
 
 .slider-main__wrap
 	width: 100%
@@ -232,6 +237,8 @@ select.select-beauty
 	bsh()
 	width: 32%
 	padding: 40px
+	background: white
+	br(7px)
 
 .sale__el-bot
 	width: 100%
@@ -411,7 +418,6 @@ select.select-beauty
 		margin-bottom: 30px
 		font-size: 24px
 		padding: 0 15px
-		font-weight: bold
 	font-size 36px
 	font-weight 300
 	text-align: center
@@ -478,7 +484,7 @@ select.select-beauty
 	flex(mid)
 	&:hover
 		.icon-el
-			fill red
+			fill #256da1
 	.icon-el
 		tr(all)
 		size: 80px
@@ -509,13 +515,18 @@ select.select-beauty
 .review-el__text
 	+below(768px)
 		width: 95%
+		font-size: 16px
 	line-height: 1.6
 	text-align: center
 	width: 75%
 	margin-bottom: 30px
+	font-size: 18px
 
 .review-el__name
+	+below(768px)
+		font-size: 16px
 	color: #888888
+	font-size: 18px
 
 .review-el__wrap
 	flex(mid)
@@ -575,8 +586,6 @@ select.select-beauty
 .decloration-content
 	+below(768px)
 		margin-top: 30px
-		p
-			color #888
 	margin-top: 70px
 
 .news
@@ -615,5 +624,8 @@ select.select-beauty
 	white-space: nowrap
 //.news__link
 
+.section-sale
+	+below(768px)
+		padding-top: 60px
 
 @import "../module/**/*"
