@@ -75,7 +75,7 @@ include ../module/**/*.jade
 	.main-cont
 		.kind-wrap
 			- each kind in kinds
-				.kind__el
+				a(href="#").kind__el
 					.kind__icon
 						svg(class='icon-el')
 							use(xlink:href="##{kind.icon}")

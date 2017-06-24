@@ -15,7 +15,7 @@ $(document).ready(function(){
 	}
 	hideToggle('.menu-toggle','.header-nav');
 
-	if ($(document).width() < 1025) {
+	if ($(document).width() < 1024) {
 		$('.header-nav__sub').hide();
 		$('.header-nav__el-icon').click(function () {
 			var current = $(this).closest('.header-nav__el').find('.header-nav__sub');
