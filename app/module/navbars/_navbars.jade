@@ -1,0 +1,44 @@
+mixin navbars()
+	//block navbars
+	.content-nav
+		a(href="#").nav-get-ndfl
+			.nav-get-ndfl__img(style="background-image:url('img/flower.jpg')")
+			.nav-get-ndfl__link
+				.link--blue Получите 3-НДФЛ
+
+		.navbar-menu
+			.navbar-title Налоги
+			.navbar-menu-wrap
+				.navbar-menu__el
+					a(href="#").navbar-menu__el-link
+						span НДФЛ
+				.navbar-menu__el
+					.navbar-menu__el-link
+						span Продали машину
+						+icon("arrow-down","icon-el")
+					.navbar-menu__sub
+						a(href="#").navbar-menu__el--sub
+							span Подпункт 1
+						a(href="#").navbar-menu__el--sub
+							span Подпункт 2
+						a(href="#").navbar-menu__el--sub
+							span Подпункт 3
+				.navbar-menu__el
+					a(href="#").navbar-menu__el-link
+						span Продали жилье
+				.navbar-menu__el
+					.navbar-menu__el-link
+						span Лечение
+						+icon("arrow-down","icon-el")
+					.navbar-menu__sub
+						a(href="#").navbar-menu__el--sub
+							span Подпункт 1
+						a(href="#").navbar-menu__el--sub
+							span Подпункт 2
+						a(href="#").navbar-menu__el--sub
+							span Подпункт 3
+				.navbar-menu__el
+					a(href="#").navbar-menu__el-link
+						span Налог на имущество
+
+	//block navbars end
