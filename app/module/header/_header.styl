@@ -1,6 +1,6 @@
 /*! block header*/
 .header
-	background-color rgba(0, 0, 0, 0.25)
+	background: white
 
 .header-logo
 	+below(1024px)
@@ -27,7 +27,7 @@
 	width: 20%
 	.icon-el
 		size 16px
-		fill white
+		fill blue
 
 .header-nav__el-link-wrap
 	+below(1024px)
@@ -51,9 +51,10 @@
 		font-size: 14px
 	font-size: 14px
 	position: relative
+	z-index 200
 	.icon-el
 		size 10px
-		fill white
+		//fill white
 		margin-left: 5px
 		tr(all)
 	&:hover
@@ -71,9 +72,9 @@
 		width: 100%
 		flex(between)
 		padding: 20px 10px
+		color white
 	padding: 30px 0
 	display: inline-block
-	color white
 
 .header-nav__el-icon
 	+below(1024px)
@@ -83,6 +84,7 @@
 		size: 60px
 		.icon-el
 			size 15px
+			fill white
 
 .header-cab
 	+below(640px)
@@ -143,10 +145,13 @@
 		padding: 20px
 		input
 			br(0)
+		br(0)
+		border-bottom 1px solid $border-color
+		border-top 1px solid $border-color
 	padding: 20px
 	position: relative
 	background: white
-
+	br(4px)
 .input-search
 	+below(768px)
 		width: 100%
@@ -168,7 +173,7 @@
 .header-cab__name
 	+below(640px)
 		display: none
-	color white
+	//color white
 	font-size: 14px
 	margin-top: 3px
 
@@ -177,7 +182,7 @@
 		display: none
 	width: 1px
 	height: 32px
-	background-color rgba(255, 255, 255, 0.5)
+	background-color: #dddddd
 	margin: 0 15px
 
 .header-nav
@@ -207,6 +212,7 @@
 		transition initial
 		.window-coner-top
 			display: none
+	//overflow: hidden
 	tr(all)
 	transform translateY(20px)
 	position: absolute
@@ -223,6 +229,7 @@
 .header-nav__sub-wrap
 	position: relative
 	background: white
+	br(4px)
 
 .header-nav__sub--hidden
 	opacity 0
@@ -244,6 +251,11 @@
 		border-bottom: 0
 
 .header-auth__wrap
+	+below(768px)
+		border-top 1px solid $border-color
+		border-bottom 1px solid $border-color
+		br(0px)
+	br(4px)
 	position: relative
 	padding: 20px
 	padding-top: 40px
@@ -251,7 +263,7 @@
 	background: white
 	.window-coner-top
 		left: 65%
-		border 1px solid $border-color
+
 
 .header-auth__check
 	margin-bottom: 20px
@@ -291,29 +303,13 @@
 		width: 100%
 		margin-bottom: 20px
 
-.header-slider
-	position: relative
-	z-index 100
 
-.header-container
-	position: absolute
-	z-index 100
-	width: 100%
+
+
 
 .header-contact
-	+below(1200px)
-		flex(mid)
-	+below(768px)
-		fw()
-		justify-content: flex-start
-	f()
-	up()
-	margin-top: 15px
-	color white
-	font-size 13px
-	font-weight 400
-	a
-		color white
+	display: none
+
 
 .header-contact__el
 	+below(768px)
@@ -329,11 +325,67 @@
 	border-right 1px solid rgba(255, 255, 255, 0.5)
 	//border-left 1px solid rgba(255, 255, 255, 0.5)
 
+.header-container
+	position: relative
+	z-index 100
+	width: 100%
+	border-bottom:1px solid #dddddd
+
+.header-logo--white
+	display: none
+
 .slider-main
 	+below(768px)
 		.owl-nav
 			display: none!important
 .header-layer
 	position: relative
+	z-index 200
+
+.header-slider
+	position: relative
+	z-index 100
+	.header
+		background-color rgba(0, 0, 0, 0.25)
+	.header-container
+		position: absolute
+		z-index 100
+		width: 100%
+	.header-nav__el-link
+		color white
+	.header-nav__el
+		.icon-el
+			fill white
+	.header-tools
+		.icon-el
+			fill white
+	.header-tools__divider
+		background-color rgba(255, 255, 255, 0.5)
+	.header-cab__name
+		color white
+	.header-contact
+		+below(1200px)
+			flex(mid)
+		+below(768px)
+			fw()
+			justify-content: flex-start
+		f()
+		up()
+		margin-top: 15px
+		color white
+		font-size 13px
+		font-weight 400
+		a
+			color white
+	.header-logo--white
+		display: block
+	.header-logo--blue
+		display: none
+	.header-container
+		border 0
+	.header-auth__wrap
+		border: 0
+	.header-search-form-wrap
+		border: 0
 
 /*!block header end */

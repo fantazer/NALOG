@@ -704,4 +704,76 @@ select.select-beauty
 	+below(768px)
 		padding-top: 60px
 
+.sub-header
+	+below(768px)
+		fw()
+		margin: 20px 0
+	f()
+	justify-content:space-between
+	margin: 35px 0
+
+.print-link
+	+below(1200px)
+		margin-bottom: 10px
+	+below(1024px)
+		display: none
+	f()
+	align-items: center
+	color blue
+	.icon-el
+		size 16px
+		fill blue
+		margin-right: 10px
+
+.time-stamp
+	font-size: 14px
+	color #999999
+
+.sub-header__content
+	+below(768px)
+		width: 100%
+	width: 65%
+
+.content
+	+below(768px)
+		fw()
+		margin-bottom: 50px
+	f()
+	justify-content: space-between
+	margin-bottom: 150px
+
+.content-col
+	+below(768px)
+		width: 100%
+	width: 65%
+	p
+		line-height: 1.7
+		&:nth-child(1)
+			margin-top: 0
+
+.content-nav
+	+below(768px)
+		width: 100%
+	width: 32%
+
+.content-title
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	h1
+		margin: 0
+		padding: 0
+	width: 65%
+	margin-bottom: 30px
+
+.sub-header__navbar
+	+below(1200px)
+		fw()
+	+below(768px)
+		width: 100%
+	flex(between)
+	width: 32%
+
+
+
 @import "../module/**/*"

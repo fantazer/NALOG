@@ -1,11 +1,12 @@
-mixin header(classname)
+mixin header()
 	.header-container
-		.header(class=classname)
+		.header
 			.header-layer
 				.main-cont
 					.header-wrap
 						a(href="#").header-logo
-							img(src="img/logo-main.svg", alt="")
+							img(src="img/logo-main.svg", alt="").header-logo--white
+							img(src="img/logo-blue.svg", alt="").header-logo--blue
 						.header-nav
 							- var items = ['О нас','Декларация 3-НДФЛ','Налоги','Покупка жилья','Другие вычеты','Полезное'];
 							- each item in items

@@ -1,9 +1,13 @@
 {
 	"block":{
 		"header":"header",
-		"footer":"footer"
+		"footer":"footer",
+		"breadcrumbs":"breadcrumbs",
+		"navbars":"navbars"
 	},
 	"page":{
-		"index":"index"
+		"index":"index",
+		"main":"main",
+		"item":"item"
 	}
 }
