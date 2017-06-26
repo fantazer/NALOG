@@ -4,6 +4,9 @@
 .footer-head
 	+below(1024px)
 		fw()
+	+below(768px)
+		padding: 20px 0
+		margin-bottom: 20px
 	flex(between)
 	padding: 40px 0
 	border-bottom:1px solid $border-color
@@ -17,6 +20,7 @@
 	+below(768px)
 		fw()
 		fl()
+		margin-bottom: 0px
 	width: 65%
 	f()
 	align-items: center
@@ -44,9 +48,8 @@
 .footer-head-soc
 	+below(1024px)
 		width: 100%
+		flex(mid)
 	f()
-	justify-content: center
-	align-items: flex-end
 	margin-top: 5px
 	.icon-el
 		padding: 10px
@@ -97,17 +100,28 @@
 
 .footer-head-soc__el
 	margin-left: 5px
+	.icon-el
+		+below(768px)
+			size 36px
+		f()
+		justify-content: flex-start
+
+.vk-icon
+	.icon-el
+		+below(768px)
+			size 40px
+		size 48px
 
 .footer-bottom__el
 	+below(1024px)
 		flex-grow 1
 		flex-basis 50%
 		text-align: center
-		padding: 10px
+		padding: 10px 0
 	+below(768px)
 		text-align: center
 	+below(640px)
-		font-size: 10px
+		font-size: 12px
 	tr(all)
 	font-size: 14px
 	color #888888

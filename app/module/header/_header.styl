@@ -24,7 +24,6 @@
 	position: relative
 	height: 100%
 	align-items: center
-	width: 20%
 	.icon-el
 		size 16px
 		fill blue
@@ -87,10 +86,11 @@
 			fill white
 
 .header-cab
+	+below(1024px)
+		height: 60px
 	+below(640px)
 		width: 100%
 		flex(mid)
-
 	f()
 	cp()
 	align-items: center
@@ -107,6 +107,8 @@
 		margin-right: 15px
 
 .header-search
+	+below(1024px)
+		height: 60px
 	+below(768px)
 		position: initial
 		.coner-wrap
@@ -288,6 +290,10 @@
 		border 0px
 		.coner-wrap
 			display: none
+	.window-coner-top
+		left: 80%
+		+below(1024px)
+			left: 60%
 	tr(all)
 	position: absolute
 	top: 100%
@@ -308,8 +314,27 @@
 
 
 .header-contact
-	display: none
+	+below(1200px)
+		//flex(mid)
+	+below(768px)
+		margin-top: 15px
+	+below(640px)
+		fw()
+		justify-content: flex-start
+	f()
+	up()
+	margin-top: 30px
+	color white
+	font-size 13px
+	font-weight 400
+	a
+		color black
 
+.header-contact-wrap
+	+below(768px)
+		padding-bottom: 15px
+	border-top 1px solid #dddddd
+	padding-bottom: 30px
 
 .header-contact__el
 	+below(768px)
@@ -317,13 +342,16 @@
 		font-size: 10px
 		width: 100%
 		padding-bottom: 2px
-		margin-left: 5px
+		padding-left: 0
 	&:last-child
 		border 0
-	padding: 6px 15px 6px 6px
+	padding: 6px 15px 6px 0px
 	margin-right: 15px
-	border-right 1px solid rgba(255, 255, 255, 0.5)
-	//border-left 1px solid rgba(255, 255, 255, 0.5)
+	border-right 1px solid #dddddd
+	span
+		color #888888
+		display: inline-block
+		margin-right: 5px
 
 .header-container
 	position: relative
@@ -387,5 +415,10 @@
 		border: 0
 	.header-search-form-wrap
 		border: 0
-
+	.header-contact-wrap
+		border-top: 0
+		padding-bottom: 0
+	.header-contact__el
+		span
+			color white
 /*!block header end */

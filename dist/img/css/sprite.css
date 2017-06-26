@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 51.2em 1096.9em;
+    background-size: 51.2em 1082.1em;
 }
 
 .no-svg .icon:before {
@@ -397,15 +397,15 @@
 
   .icon.soc-vk:before {
       background-position: 0em -987.7em;
-      width: 51.2em;
-      height: 51.2em;
+      width: 36.3301em;
+      height: 36.3301em;
   }
 
 
 
 
   .icon.soc-youtube:before {
-      background-position: 0em -1038.9em;
+      background-position: 0em -1024.1em;
       width: 6.4em;
       height: 6.4em;
   }
@@ -414,7 +414,7 @@
 
 
   .icon.star:before {
-      background-position: 0em -1045.3em;
+      background-position: 0em -1030.5em;
       width: 49.0727em;
       height: 49.0727em;
   }
@@ -423,7 +423,7 @@
 
 
   .icon.think-arrow-right:before {
-      background-position: 0em -1094.4em;
+      background-position: 0em -1079.6em;
       width: 6.9em;
       height: 2.42em;
   }

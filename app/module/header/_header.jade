@@ -60,10 +60,17 @@ mixin header()
 												a(href="#") Регистрация
 							.menu-toggle
 								+icon("menu","icon-el")
-		.main-cont
-			.header-contact
-				a(href="tel:8 (495) 646 8905").header-contact__el Москва 8 (495) 646 8905
-				a(href="tel:8 (812) 643 4225").header-contact__el Санкт-Петербург 8 (812) 643 4225
-				a(href="tel:8 800 500 3478").header-contact__el Россия 8 800 500 3478 (бесплатно)
+		.header-contact-wrap
+			.main-cont
+				.header-contact
+					a(href="tel:8 (495) 646 8905").header-contact__el
+						span Москва:
+						|	8 (495) 646 8905
+					a(href="tel:8 (812) 643 4225").header-contact__el
+						span Санкт-Петербург:
+						| 8 (812) 643 4225
+					a(href="tel:8 800 500 3478").header-contact__el
+						span Россия:
+						| 8 800 500 3478 (бесплатно)
 
 	//block header end
