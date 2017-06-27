@@ -6,20 +6,13 @@ mixin icon(name,cls)
   svg(class=cls)
     use(xlink:href="#" + name)
 
-mixin checkbox(text,disable)
+mixin checkbox()
   .check-el
-    if disable
-      label.style-label.style-label--checkbox.style-label--disable
-        input(type="checkbox").sytle-input
-        .sytle-input-element
-          +icon("checked","icon-check")
-        .sytle-input-text=text
-    else
-      label.style-label.style-label--checkbox
-        input(type="checkbox").sytle-input
-        .sytle-input-element
-          +icon("checked","icon-check")
-        .sytle-input-text=text
+    label.style-label.style-label--checkbox
+      input(type="checkbox" class="sytle-input" checked=attributes.check)
+      .sytle-input-element
+        +icon("checked","icon-check")
+      .sytle-input-text #{attributes.text}
 mixin radio(text,group,disable)
   .check-el
     if disable

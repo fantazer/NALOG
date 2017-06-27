@@ -4,6 +4,8 @@
 
 .header-logo
 	+below(1024px)
+		width: 150px
+	+below(640px)
 		width: 100px
 	height: 40px
 	width: 15%
@@ -260,7 +262,7 @@
 	br(4px)
 	position: relative
 	padding: 20px
-	padding-top: 40px
+	padding-top: 30px
 	z-index 5
 	background: white
 	.window-coner-top
@@ -338,11 +340,14 @@
 
 .header-contact__el
 	+below(768px)
-		border-right: 0
+		text-align: center
 		font-size: 10px
-		width: 100%
 		padding-bottom: 2px
 		padding-left: 0
+	+below(640px)
+		width: 100%
+		border-right: 0
+		text-align: left
 	&:last-child
 		border 0
 	padding: 6px 15px 6px 0px

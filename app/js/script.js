@@ -25,7 +25,7 @@ $(document).ready(function(){
 	}
 	hideToggle('.menu-toggle','.header-nav');
 
-	$(window).resize(function(){
+	var topMenu = function(){
 		if ($(document).width() < 1024) {
 			$('.header-nav__sub').hide();
 			$('.header-nav__el-icon').click(function () {
@@ -38,7 +38,11 @@ $(document).ready(function(){
 					}
 			})
 		}
-	})
+	};
+	topMenu();
+	$(window).resize(function(){
+		topMenu();
+	});
 
 
 	//init fancy box
