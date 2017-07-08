@@ -107,11 +107,15 @@ select.select-beauty
 	font-size: 10px
 
 .owl-next,.owl-prev
+	tr(all)
 	position absolute
 	top 50%
 	margin-top -30px
 	color white
 	font-size 40px
+	opacity .5
+	&:hover
+		opacity 1
 .owl-carousel
 	position relative
 .owl-prev
@@ -391,7 +395,7 @@ select.select-beauty
 	+below(1200px)
 		font-size: 16px
 	font-size: 18px
-	margin-bottom: 15px
+	margin-bottom: 10px
 
 .kind__text
 	+below(1200px)
@@ -604,7 +608,8 @@ select.select-beauty
 
 .rewards__img
 	margin-bottom: 20px
-
+	img
+		size 150px
 .rewards__title
 	+below(768px)
 		text-align: center
@@ -665,7 +670,7 @@ select.select-beauty
 
 .news__el
 	+below(1024px)
-		width: 30%
+		width: 33%
 	+below(768px)
 		width: 100%
 		flex(mid)
@@ -673,7 +678,13 @@ select.select-beauty
 		padding-bottom: 20px
 		margin-bottom: 20px
 		border-bottom:1px solid #e0e0e0
-	width: 31%
+	width: 32%
+	padding: 20px
+	tr(all)
+	&:hover
+		box-shadow 0 5px 15px rgba(196, 208, 227, 0.33)
+		border-radius 4px
+		background: white
 
 .news__date
 	color #888888
@@ -800,5 +811,6 @@ select.select-beauty
 	p
 		margin: 0
 	margin: 40px 0
+
 
 @import "../module/**/*"

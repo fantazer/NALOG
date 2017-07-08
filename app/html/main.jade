@@ -46,7 +46,7 @@ include ../module/**/*.jade
 					a(href="#").sale__get.btn--md.btn--blue Выбрать
 //section-sale-end
 
-//section-sale
+//section-work
 .section.section-work
 	.section-title Как это работает
 	.main-cont
@@ -69,9 +69,9 @@ include ../module/**/*.jade
 				.work__icon
 					+icon("icons-check","icon-el")
 				.work__text  Вы можете распечатать готовую декларацию или подать онлайн.
-//section-sale-end
+//section-work-end
 
-//section-sale
+//section-kind
 .section.section--grey.section-kind
 	.main-cont
 		.kind-wrap
@@ -83,7 +83,7 @@ include ../module/**/*.jade
 					.kind__cont
 						.kind__title #{kind.title}
 						.kind__text #{kind.text}
-//section-sale-end
+//section-kind-end
 
 //section-why
 .section.section-why
@@ -184,11 +184,11 @@ include ../module/**/*.jade
 	.main-cont
 		.news
 			- for (var i=0;i<3;i++)
-				.news__el
+				a(href="#").news__el
 					.news__date 23 Марта 2017
 					.news__title Росгосстрах-Жизнь и Налогия: совместный проект
 					.news__text Страховая компания «Росгосстрах-Жизнь» и Налогия запустили электронное оформление налогового вычета для клиентов «Росгосстрах-Жизнь».
-					a(href="#").news__link.link--blue Подробнее
+					.news__link.link--blue Подробнее
 //section-news-end
 
 //section-help
