@@ -1789,6 +1789,9 @@ select.select-beauty {
 .slider-main__el .main-cont {
   height: 100%;
 }
+.input-full-width {
+  width: 100%;
+}
 .slider-main__filter {
   position: absolute;
   width: 100%;
@@ -2725,8 +2728,8 @@ select.select-beauty {
   margin-bottom: 20px;
 }
 .rewards__img img {
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
 }
 .rewards__title {
   margin-bottom: 20px;
@@ -3126,6 +3129,90 @@ select.select-beauty {
 }
 .text-mark p {
   margin: 0;
+}
+.input-label {
+  color: #3a90c8;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .input-label {
+    font-size: 16px;
+  }
+}
+.input-row {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 640px) {
+  .send-info input {
+    width: 100%;
+  }
+}
+.reg-container {
+  width: 40%;
+  margin: 60px auto 0px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+  .reg-container {
+    width: 60%;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .reg-container {
+    width: 100%;
+  }
+}
+.reg-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.reg-container .input-row {
+  width: 100%;
+}
+.reg-container .input-label {
+  text-align: center;
+}
+.reg-container p {
+  text-align: center;
+}
+.reg-container h1 {
+  text-align: center;
 }
 /* block breadcrumbs*/
 .bread {

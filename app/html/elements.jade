@@ -92,6 +92,12 @@ include ../module/**/*.jade
     input(type="text" placeholder="Username" )
     input(type="text" placeholder="Passwords")
     textarea(name="", cols="30", rows="10" placeholder="Text")
+
+    form(action="#").send-info
+      .input-row
+        .input-label Адрес электронной почты (e-mail)
+        input(type="text" placeholder="Ваша почта" ).input-full-width
+      input(type="submit" value="Начать").btn--md.btn--blue
   hr.elements-hr
 
   .elements-checkbox-block
