@@ -1,0 +1,30 @@
+include block_html/_style.jade
+include ../module/**/*.jade
+
+
++header('header-slider')
+
+
+.main-cont
+	.content
+		.reg-container
+			.content-title
+				h1 Регистрация
+			p Если Вы впервые на Налогии, пожалуйста, введите Ваш адрес электронной почты, чтобы начать. Это очень просто.
+
+			form(action="#").send-info
+				.input-row
+
+					input(type="text" placeholder="Ваш адрес электронной почты (e-mail)" ).input-full-width
+				input(type="submit" value="Начать").btn--md.btn--blue
+
+			p Если вы уже зарегистрированы -
+				a(href="#").link--blue войдите
+			p Регистрируясь, Вы даете согласие на обработку ваших персональных данных в соответствии с
+				a(href="/legal/policy.php").link--blue политикой обработки персональных данных.
+
++footer()
+
+
+
+include ./block_html/_script.jade
