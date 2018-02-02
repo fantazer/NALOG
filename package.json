@@ -17,7 +17,7 @@
     "gulp-combine-mq": "^0.4.0",
     "gulp-data": "^1.2.1",
     "gulp-filter": "*",
-    "gulp-if": "^1.2.5",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-jade-globbing": "^0.1.9",
