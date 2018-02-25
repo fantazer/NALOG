@@ -214,9 +214,12 @@
 		opacity 1!important
 		visibility visible!important
 		transition initial
+		display: none
 		.window-coner-top
 			display: none
 	//overflow: hidden
+	+above(1025px)
+		display: block !important
 	tr(all)
 	transform translateY(20px)
 	position: absolute

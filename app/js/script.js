@@ -15,6 +15,7 @@ $(document).ready(function(){
 		$(targetClick).click(function(event){
 				event.stopPropagation();
 				$(toggleEl).slideToggle("fast");
+				$('.header-nav__sub').hide();
 		});
 		$(toggleEl).on("click", function (event) {
 			event.stopPropagation();
@@ -25,24 +26,12 @@ $(document).ready(function(){
 	}
 	hideToggle('.menu-toggle','.header-nav');
 
-	var topMenu = function(){
-		if ($(document).width() < 1024) {
-			$('.header-nav__sub').hide();
+
 			$('.header-nav__el-icon').click(function () {
 				var current = $(this).closest('.header-nav__el').find('.header-nav__sub');
-				$('.header-nav__sub').slideUp();
-					if(current.is(':visible')){
-						current.slideUp();
-					} else {
-						current.slideToggle(400,"linear");
-					}
-			})
-		}
-	};
-	topMenu();
-	$(window).resize(function(){
-		topMenu();
-	});
+				$('.header-nav__sub').not(current).slideUp();
+				current.slideToggle();
+			});
 
 
 	//init fancy box
