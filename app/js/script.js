@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+	//play video on main page
+	$('.video-layer').on('click', function(ev) {
+    $(".introVideo")[0].src += "&autoplay=1";
+    ev.preventDefault();
+ 		$('.video-layer').hide();
+ 		$('.video-img').hide();
+  });
+	//play video on main page===end
+
+	//hide cookie message
+	$('.b-person-data__wrap .icon').click(function(){
+		$('.b-person-data__wrap').hide();
+	});
+	//hide cookie message===end
+
 	//navbar accordion
 	$('.navbar-menu__el').click(function () {
 		$('.navbar-menu__el').find('.navbar-menu__el-link').removeClass('navbar-menu__el-link--active')

@@ -185,8 +185,7 @@ a:hover {
 .type--bold {
   font-weight: $weigh-bold;
 }
-img,
-iframe {
+img {
   max-width: 100%;
   height: auto;
   border: 0;
@@ -2563,23 +2562,6 @@ select.select-beauty {
     width: 100%;
   }
 }
-.video-img .icon-el {
-  -webkit-transition: all 0.4s;
-          transition: all 0.4s;
-  width: 80px;
-  height: 80px;
-  fill: #3a90c8;
-}
-@media only screen and (max-width: 768px) {
-  .video-img .icon-el {
-    width: 60px;
-    height: 60px;
-  }
-}
-.video-img .icon-el:hover,
-.video-img .icon-el .icon-el {
-  fill: #256da1;
-}
 .review-slider .slider-control {
   fill: #ddd;
 }
@@ -3227,6 +3209,170 @@ select.select-beauty {
 .news__list-el .news__date {
   font-size: 14px;
   margin-bottom: 10px;
+}
+.b-person-data {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-animation-name: slideUpText;
+          animation-name: slideUpText;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  z-index: 20;
+}
+@media only screen and (max-width: 768px) {
+  .b-person-data .main-cont {
+    padding: 0;
+  }
+}
+.b-person-data__wrap {
+  padding: 20px;
+  -webkit-border-radius: 10px 10px 0 0;
+          border-radius: 10px 10px 0 0;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 3px #cacaca;
+          box-shadow: 0px 0px 3px #cacaca;
+  font-size: 12px;
+}
+@media only screen and (max-width: 768px) {
+  .b-person-data__wrap {
+    font-size: 10px;
+    padding: 10px;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .b-person-data__wrap {
+    font-size: 8px;
+  }
+}
+.b-person-data__wrap .icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
+  top: -30px;
+  fill: #111;
+}
+.b-person-data__wrap .icon:hover {
+  cursor: pointer;
+}
+.introVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.b-video-cont {
+  *zoom: 1;
+  width: auto;
+  max-width: 800px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
+  padding: 0 0;
+  position: relative;
+  padding: 20% 15%;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 1280px) {
+  .b-video-cont {
+    padding: 25% 15%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .b-video-cont {
+    padding: 30% 15%;
+  }
+}
+.b-video-cont:before,
+.b-video-cont:after {
+  content: '';
+  display: table;
+}
+.b-video-cont:after {
+  clear: both;
+}
+@media only screen and (min-width: 800px) {
+  .b-video-cont {
+    width: 800px;
+  }
+}
+.b-video-cont .icon-el {
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  width: 80px;
+  height: 80px;
+  fill: #3a90c8;
+}
+@media only screen and (max-width: 768px) {
+  .b-video-cont .icon-el {
+    width: 60px;
+    height: 60px;
+  }
+}
+.b-video-cont .icon-el:hover,
+.b-video-cont .icon-el .icon-el {
+  fill: #256da1;
+}
+.b-video-cont iframe {
+  border: 0;
+}
+.video-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 10;
+}
+.video-layer-cont {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+  height: 100%;
+}
+.video-play {
+  margin-bottom: 3%;
+}
+.video-play:hover {
+  cursor: pointer;
+}
+.video-play .icon {
+  width: 100px;
+  height: 100px;
 }
 /* block breadcrumbs*/
 .bread {
@@ -4420,3 +4566,23 @@ select.select-beauty {
   display: none;
 }
 /*block navbars end */
+@-webkit-keyframes slideUpText {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes slideUpText {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}

@@ -535,15 +535,6 @@ select.select-beauty
 	width: 750px
 	bg-full()
 	flex(mid)
-	.icon-el
-		+below(768px)
-			size: 60px
-		tr(all)
-		size: 80px
-		fill blue
-		&:hover
-		.icon-el
-			fill #256da1
 
 .review-slider
 	.slider-control
@@ -867,4 +858,92 @@ select.select-beauty
 	.news__date
 		font-size: 14px
 		margin-bottom: 10px
+@keyframes slideUpText
+	0%
+		transform: translateY(100%)
+	100%
+		transform: translateY(0%)
+
+.b-person-data
+	+below(768px)
+		.main-cont
+			padding: 0
+	position: fixed
+	left:0
+	bottom: 0
+	width: 100%
+	animation-name: slideUpText
+	animation-duration: 2s
+	z-index 20
+
+.b-person-data__wrap
+	+below(768px)
+		font-size: 10px
+		padding: 10px
+		border-radius 0
+	+below(640px)
+		font-size: 8px
+	padding: 20px
+	border-radius 10px 10px 0 0
+	background: white
+	box-shadow 0px 0px 3px #cacaca
+	font-size: 12px
+	.icon
+		cp()
+		size 20px
+		position: absolute
+		right: 0px
+		top -30px
+		fill black
+
+.introVideo
+	width: 100%
+	height: 100%
+	position: absolute
+	top:0
+	left: 0
+
+.video-layer
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	z-index 10
+.b-video-cont
+	+below(1280px)
+		padding: 25% 15%
+	+below(768px)
+		padding: 30% 15%
+	center(800px,0)
+	position: relative
+	padding: 20% 15%
+	margin-top: 30px
+	.icon-el
+		+below(768px)
+			size: 60px
+		tr(all)
+		size: 80px
+		fill blue
+		&:hover
+		.icon-el
+			fill #256da1
+	iframe
+		border 0
+.video-img
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	bg-full()
+	z-index 10
+
+.video-layer-cont
+	flex(mid)
+	fl()
+	width: 100%
+	height: 100%
+
+
 @import "../module/**/*"

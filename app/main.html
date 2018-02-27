@@ -563,14 +563,21 @@
 					</div>
 				</div>
 				<div class="section-title-divider">С нами декларация — это просто!</div>
-				<div class="video">
-					<a href="https://youtu.be/KOfyeYiO8Rk" class="fancybox video-link">
-						<div style="background-image:url('img/video-cover.jpg')" class="video-img">
+				<!--.video
+		a(href="https://youtu.be/KOfyeYiO8Rk").fancybox.video-link
+			.video-img(style="background-image:url('img/video-cover.jpg')")
+				+icon("icons-play-button","icon-el")
+		-->
+				<div class="b-video-cont">
+					<div style="background-image:url('img/video-cover.jpg')!important" class="video-img"></div>
+					<iframe src="https://www.youtube.com/embed/yCR1iXLEyBY?showinfo=0&amp;controls=1&amp;autohide=1" class="introVideo"></iframe>
+					<div class="video-layer">
+						<div class="video-layer-cont">
 							<svg class="icon-el">
 								<use xlink:href="#icons-play-button"></use>
 							</svg>
 						</div>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -737,6 +744,18 @@
 			</div>
 		</div>
 		<!--section-help-end-->
+		<div class="b-person-data">
+			<div class="main-cont">
+				<div class="b-person-data__wrap">
+					<svg class="icon">
+						<use xlink:href="#cancel"></use>
+					</svg>
+					<div class="b-person-data__text">Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookie, пользовательских данных (сведения о местоположении; тип и версия ОС; тип и версия Браузера; тип устройства и разрешение его экрана; источник откуда пришел на сайт пользователь;
+						с какого сайта или по какой рекламе; язык ОС и Браузера; какие страницы открывает и на какие кнопки нажимает пользователь; ip-адрес) в целях функционирования сайта, проведения ретаргетинга и проведения статистических исследований и обзоров. Если
+						вы не хотите, чтобы ваши данные обрабатывались, покиньте сайт.</div>
+				</div>
+			</div>
+		</div>
 		<!--block footer-->
 		<div class="footer">
 			<div class="main-cont">

@@ -110,9 +110,15 @@ include ../module/**/*.jade
 
 		.section-title-divider С нами декларация — это просто!
 
-		.video
+		//.video
 			a(href="https://youtu.be/KOfyeYiO8Rk").fancybox.video-link
 				.video-img(style="background-image:url('img/video-cover.jpg')")
+					+icon("icons-play-button","icon-el")
+		.b-video-cont
+			.video-img(style="background-image:url('img/video-cover.jpg')!important")
+			iframe(src="https://www.youtube.com/embed/yCR1iXLEyBY?showinfo=0&controls=1&autohide=1" ).introVideo
+			.video-layer
+				.video-layer-cont
 					+icon("icons-play-button","icon-el")
 //section-why-end
 
@@ -199,6 +205,12 @@ include ../module/**/*.jade
 			.help-get.btn--md.btn--white Попробовать бесплатно
 //section-help-end
 
+.b-person-data
+	.main-cont
+		.b-person-data__wrap
+			+icon("cancel","icon")
+			.b-person-data__text Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookie, пользовательских данных (сведения о местоположении; тип и версия ОС; тип и версия Браузера; тип устройства и разрешение его экрана; источник откуда пришел на сайт пользователь; с какого сайта или по какой рекламе; язык ОС и Браузера; какие страницы открывает и на какие кнопки нажимает пользователь; ip-адрес) в целях функционирования сайта, проведения ретаргетинга и проведения статистических исследований и обзоров. Если вы не хотите, чтобы ваши данные обрабатывались, покиньте сайт.
+			
 +footer()
 
 
