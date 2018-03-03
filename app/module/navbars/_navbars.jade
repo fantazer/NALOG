@@ -15,7 +15,8 @@ mixin navbars()
 				.navbar-menu__el
 					.navbar-menu__el-link
 						span Продали машину
-						+icon("arrow-down","icon-el")
+						.navbar-menu__el-icon
+							+icon("arrow-down","icon-el")
 					.navbar-menu__sub
 						a(href="#").navbar-menu__el--sub
 							span Подпункт 1
@@ -29,7 +30,8 @@ mixin navbars()
 				.navbar-menu__el
 					.navbar-menu__el-link
 						span Лечение
-						+icon("arrow-down","icon-el")
+						.navbar-menu__el-icon
+							+icon("arrow-down","icon-el")
 					.navbar-menu__sub
 						a(href="#").navbar-menu__el--sub
 							span Подпункт 1

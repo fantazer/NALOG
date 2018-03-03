@@ -32,42 +32,51 @@
 		&:first-child
 			border-top 1px solid #dddddd!important
 
-.navbar-menu__el-link
-	+below(768px)
-		font-size: 14px
-	padding: 20px
-	display: block
-	cp()
+
 
 .navbar-menu__el--sub
 	display: block
 	padding: 20px
 	padding-left:40px
-	border-top 1px solid #dddddd!important
-
+	border-top 1px solid rgba(213, 213, 213, 0.4) !important
+	background: #ededed
 .navbar-menu__el
 	display: block
 	border-bottom 1px solid #dddddd
 
 .navbar-menu__el-link
+	+below(768px)
+		font-size: 14px
+	//padding: 20px
+	display: block
+	cp()
 	flex(between)
 	tr(all)
+	span
+		padding: 20px
 	.icon-el
 		size 11px
 		tr(all)
 	&:hover
-		background: blue
-		color white
-		.icon-el
-			fill white
+		background: #f2f2f2
+		.navbar-menu__el-icon
+			background: white
+
+.navbar-menu__el-icon
+	padding: 10px
+	flex(mid)
+	br(50%)
+	//background: #efefef
+	margin-right: 20px
+	border 1px solid #d8d5d5
 
 .navbar-menu__el-link--active
-	background: blue
-	color white
+	background: #f2f2f2
+	.navbar-menu__el-icon
+		background: white
 	.icon-el
-		fill white
+		//fill white
 		transform rotate(180deg)
-
 .navbar-menu__sub
 	display: none
 

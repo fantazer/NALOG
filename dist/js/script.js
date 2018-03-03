@@ -16,15 +16,24 @@ $(document).ready(function(){
 	//hide cookie message===end
 
 	//navbar accordion
-	$('.navbar-menu__el').click(function () {
+	/*$('.navbar-menu__el').click(function () {
 		$('.navbar-menu__el').find('.navbar-menu__el-link').removeClass('navbar-menu__el-link--active')
 		$('.navbar-menu__sub').slideUp();
 		if(!$(this).find('.navbar-menu__sub').is(":visible")){
 			$(this).find('.navbar-menu__el-link').toggleClass('navbar-menu__el-link--active');
 			$(this).find('.navbar-menu__sub').slideDown();
 		}
-	});
+	});*/
 
+	$('.navbar-menu__el-icon').click(function () {
+		$('.navbar-menu__el-icon').closest('.navbar-menu__el-link').removeClass('navbar-menu__el-link--active');
+		$('.navbar-menu__sub').slideUp();
+		var currentSub = $(this).closest('.navbar-menu__el').find('.navbar-menu__sub');
+		if(!currentSub.is(":visible")){
+			$(this).closest('.navbar-menu__el-link').toggleClass('navbar-menu__el-link--active');
+			currentSub.slideDown();
+		}
+	});
 	//top nav mobile
 	var hideToggle = function(targetClick,toggleEl) {
 		$(targetClick).click(function(event){
