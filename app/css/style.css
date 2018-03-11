@@ -1743,7 +1743,7 @@ select.select-beauty {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -60px;
+  top: -60px;
   position: relative;
   z-index: 2000;
 }
@@ -2361,6 +2361,7 @@ select.select-beauty {
 @media only screen and (max-width: 768px) {
   .why__el {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
 .why__icon {
@@ -2567,6 +2568,7 @@ select.select-beauty {
 }
 .review-slider .owl-dots {
   margin-top: 60px;
+  top: 0;
 }
 @media only screen and (max-width: 768px) {
   .review-slider .owl-dots {
@@ -2940,7 +2942,7 @@ select.select-beauty {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 35px 0;
+  margin: 25px 0;
 }
 @media only screen and (max-width: 768px) {
   .sub-header {
@@ -3254,7 +3256,10 @@ select.select-beauty {
   position: absolute;
   right: 30px;
   top: -30px;
-  fill: #111;
+  fill: #3a90c8;
+  background: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 .b-person-data__wrap .icon:hover {
   cursor: pointer;
@@ -3288,17 +3293,20 @@ select.select-beauty {
   width: 100%;
   padding: 0 0;
   position: relative;
-  padding: 20% 15%;
+  width: 800px;
+  height: 450px;
   margin-top: 30px;
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 800px) {
   .b-video-cont {
-    padding: 25% 15%;
+    width: 640px;
+    height: 360px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 640px) {
   .b-video-cont {
-    padding: 30% 15%;
+    width: 260px;
+    height: 147px;
   }
 }
 .b-video-cont:before,
@@ -3363,6 +3371,9 @@ select.select-beauty {
           flex-flow: column;
   width: 100%;
   height: 100%;
+}
+.video-layer-cont .icon-el:hover {
+  cursor: pointer;
 }
 /* block breadcrumbs*/
 .bread {
@@ -4275,7 +4286,6 @@ select.select-beauty {
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  margin-top: 30px;
   color: #fff;
   font-size: 13px;
   font-weight: 400;
@@ -4301,7 +4311,8 @@ select.select-beauty {
 }
 .header-contact-wrap {
   border-top: 1px solid #ddd;
-  padding-bottom: 30px;
+  padding: 30px 0;
+  max-height: 88px;
 }
 @media only screen and (max-width: 768px) {
   .header-contact-wrap {
@@ -4387,7 +4398,6 @@ select.select-beauty {
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
-  margin-top: 15px;
   color: #fff;
   font-size: 13px;
   font-weight: 400;
